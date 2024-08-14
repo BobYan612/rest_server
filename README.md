@@ -14,25 +14,25 @@ There are the below features:
 
 **RESTAPI**  
 > _GET all product items or POST a new product item_  
-#0969DA/product/                  
+`#0969DA`/product/                  
 > _Query or update a product item such as "Rose Apple"_  
-#0969DA/product/<object_id>  
+`#0969DA`/product/<object_id>  
 > _GET all trolly items or POST a new trolley item_        
-#0969DA/trolley/              
+`#0969DA`/trolley/              
 > _Query or update a trolly item_     
-#0969DA/trolley/<object_id>     
+`#0969DA`/trolley/<object_id>     
 > _GET all trolly groups or POST a new trolley group_    
-#0969DA/trolley_group/           
+`#0969DA`/trolley_group/           
 > _Query or update a trolly group_   
-#0969DA/trolley_group/<object_id> 
+`#0969DA`/trolley_group/<object_id> 
 > _Create a credit card record_   
-#0969DA/credit_card/    
+`#0969DA`/credit_card/    
 > _Check the information of the credit card_          
-#0969DA/credit_card/<object_id>   
+`#0969DA`/credit_card/<object_id>   
 > _POST complete one transaction_    
-#0969DA/transaction/       
+`#0969DA`/transaction/       
 > _POST A new account_         
-#0969DA/users                     
+`#0969DA/users/`                     
 
 
 **Test**  
