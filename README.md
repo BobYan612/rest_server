@@ -5,7 +5,7 @@
 **Features**  
 There are the below features:
  - A complete transaction path from creating new account, creating new product item and then picking up these prodcuts in trolley and simulating payment
- - The database may be easily switched from sqlite3 to other DB such as mysql, SQLserver etc by changing the ([settings] (woolworths_mock/woolworths_mock/settings.py)).
+ - The database may be easily switched from sqlite3 to other DB such as mysql, SQLserver etc by changing the ([settings](woolworths_mock/woolworths_mock/settings.py)).
  - Add clean function to clean the environment with one REST command, it may easily repeats the test for stress or performance purpose.
 
 
@@ -37,10 +37,10 @@ There are the below features:
 
 **Test**  
 The project has completed the E2E test and functional test with Postman API
- - E2E Test: _A complete path from creating customer account to final transaction of a payment_  ([test_scripts](postman_api_test/end2end_test/End-to-End Tests.postman_collection.json)) ([test_result](postman_api_test/end2end_test/End-to-End Tests.postman_test_run.json))
+ - E2E Test: _A complete path from creating customer account to final transaction of a payment_  ([test_scripts](postman_api_test/end2end_test/End-to-End_Tests.postman_collection.json)) ([test_result](postman_api_test/end2end_test/End-to-End_Tests.postman_test_run.json))
  ![E2E Test Result](/postman_api_test/end2end_test/e2e_test_result_capture.jpg)
        
- - Functional Test: _A basic function test to verify the create/update/delete of a product item._  ([test_scripts](postman_api_test/functional_api_test/Functional testing.postman_collection.json)) ([test_result](postman_api_test/functional_api_test/Functional testing.postman_test_run.json)) 
+ - Functional Test: _A basic function test to verify the create/update/delete of a product item._  ([test_scripts](postman_api_test/functional_api_test/Functional_testing.postman_collection.json)) ([test_result](postman_api_test/functional_api_test/Functional_testing.postman_test_run.json)) 
  ![Functional Test Result](/postman_api_test/functional_api_test/functional_api_test.jpg)
 
 > [!TIP]  
