@@ -1,6 +1,6 @@
 ## REST Server with API Test
 
-** The Project is one example to setup a payment RESTful sever (Django) and a complete test including functional and E2E (Postman API)
+** The Project is one example to setup a payment RESTful sever (Django) and a complete test including functional and E2E (Postman API) **
 
 **Features**  
 There are the below features:
