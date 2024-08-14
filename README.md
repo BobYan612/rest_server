@@ -24,7 +24,7 @@ There are the below features:
 > _GET all trolly groups or POST a new trolley group_    
 `/trolley_group/`           
 > _Query or update a trolly group_   
-`/trolley_group/<object_id>` 
+`/trolley_group/<object_id>`   
 > _Create a credit card record_   
 `/credit_card/`    
 > _Check the information of the credit card_          
