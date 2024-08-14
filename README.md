@@ -12,17 +12,27 @@ There are the below features:
 >[!NOTE]  
 >The server is still under refining, the REST API will be improved in the future. 
 
-**RESTAPI**
-/product/                  _# GET all product items or POST a new product item_  
-/product/<object_id>       _# Query or update a product item such as "Rose Apple"_  
-/trolley/                  _# GET all trolly items or POST a new trolley item_  
-/trolley/<object_id>       _# Query or update a trolly item_  
-/trolley_group/            _# GET all trolly groups or POST a new trolley group_  
-/trolley_group/<object_id> _# Query or update a trolly group_   
-/credit_card/              _# Create a credit card record_
-/credit_card/<object_id>   _# Check the information of the credit card_  
-/transaction/              _# POST complete one transaction_  
-/users                     _# POST A new account_  
+**RESTAPI**  
+> _GET all product items or POST a new product item_ 
+/product/                  
+> _Query or update a product item such as "Rose Apple"_
+/product/<object_id>  
+> _GET all trolly items or POST a new trolley item_        
+/trolley/              
+> _Query or update a trolly item_     
+/trolley/<object_id>     
+> _GET all trolly groups or POST a new trolley group_    
+/trolley_group/           
+> _Query or update a trolly group_   
+/trolley_group/<object_id> 
+> _Create a credit card record_   
+/credit_card/    
+> _Check the information of the credit card_          
+/credit_card/<object_id>   
+> _POST complete one transaction_    
+/transaction/       
+> _POST A new account_         
+/users                     
 
 
 **Test**  
