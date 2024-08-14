@@ -13,34 +13,35 @@ There are the below features:
 >The server is still under refining, the REST API will be improved in the future. 
 
 **RESTAPI**  
-> _GET all product items or POST a new product item_ 
-/product/                  
-> _Query or update a product item such as "Rose Apple"_
-/product/<object_id>  
+> _GET all product items or POST a new product item_  
+#0969DA/product/                  
+> _Query or update a product item such as "Rose Apple"_  
+#0969DA/product/<object_id>  
 > _GET all trolly items or POST a new trolley item_        
-/trolley/              
+#0969DA/trolley/              
 > _Query or update a trolly item_     
-/trolley/<object_id>     
+#0969DA/trolley/<object_id>     
 > _GET all trolly groups or POST a new trolley group_    
-/trolley_group/           
+#0969DA/trolley_group/           
 > _Query or update a trolly group_   
-/trolley_group/<object_id> 
+#0969DA/trolley_group/<object_id> 
 > _Create a credit card record_   
-/credit_card/    
+#0969DA/credit_card/    
 > _Check the information of the credit card_          
-/credit_card/<object_id>   
+#0969DA/credit_card/<object_id>   
 > _POST complete one transaction_    
-/transaction/       
+#0969DA/transaction/       
 > _POST A new account_         
-/users                     
+#0969DA/users                     
 
 
 **Test**  
 The project has completed the E2E test and functional test with Postman API
  - E2E Test: _A complete path from creating customer account to final transaction of a payment_  ([test_scripts](postman_api_test/end2end_test/End-to-End Tests.postman_collection.json)) ([test_result](postman_api_test/end2end_test/End-to-End Tests.postman_test_run.json))
+ ![E2E Test Result](/postman_api_test/end2end_test/e2e_test_result_capture.jpg)
        
  - Functional Test: _A basic function test to verify the create/update/delete of a product item._  ([test_scripts](postman_api_test/functional_api_test/Functional testing.postman_collection.json)) ([test_result](postman_api_test/functional_api_test/Functional testing.postman_test_run.json)) 
-
+ ![Functional Test Result](/postman_api_test/functional_api_test/functional_api_test.jpg)
 
 > [!TIP]  
 > Any suggestions or questions please contact biao.yan612@gmail.com
