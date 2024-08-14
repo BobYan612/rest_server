@@ -5,7 +5,7 @@
 **Features**  
 There are the below features:
  - A complete transaction path from creating new account, creating new product item and then picking up these prodcuts in trolley and simulating payment
- - The database may be easily switched from sqlite3 to other DB such as mysql, SQLserver etc by changing the ([settings](woolworths_mock/woolworths_mock/settings.py)).
+ - The database may be easily switched from sqlite3 to other DB such as mysql, SQLserver etc by changing the ([settings.py](woolworths_mock/woolworths_mock/settings.py)) 
  - Add clean function to clean the environment with one REST command, it may easily repeats the test for stress or performance purpose.
 
 
