@@ -29,7 +29,7 @@ There are the below features:
 `/credit_card/`    
 > _Check the information of the credit card_          
 `/credit_card/<object_id>`    
-> _POST complete one transaction_    
+> _POST one transaction_    
 `/transaction/`       
 > _POST A new account_         
 `/users/`                     
