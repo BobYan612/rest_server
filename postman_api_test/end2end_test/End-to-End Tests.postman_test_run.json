@@ -1,0 +1,595 @@
+{
+	"id": "cfbe059d-8ac3-439b-a37e-b6fd66b326ae",
+	"name": "End-to-End Tests",
+	"timestamp": "2024-08-13T23:25:31.341Z",
+	"collection_id": "36779137-b83dc2ce-57b3-4c2f-a344-6341e11bd85c",
+	"folder_id": 0,
+	"environment_id": "36779137-e547157f-aa53-4b34-adf6-b70e37de4bad",
+	"totalPass": 30,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-08-13T23:25:26.426Z",
+	"totalFail": 3,
+	"results": [
+		{
+			"id": "9935e08a-971f-4db6-a828-0a185035a100",
+			"name": "[Setup][0] Clean The Enviornment",
+			"url": "http://127.0.0.1:8000/clear/",
+			"time": 258,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Folder-level status check": true
+			},
+			"testPassFailCounts": {
+				"Folder-level status check": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				258
+			],
+			"allTests": [
+				{
+					"Folder-level status check": true
+				}
+			]
+		},
+		{
+			"id": "e4eeddd0-1a81-42bd-8719-a8735626d070",
+			"name": "[Setup][1] Generate a New API Key",
+			"url": "http://127.0.0.1:8000/users/",
+			"time": 632,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Folder-level status check": true,
+				"Should return a object": true,
+				"Should contain the `count` property in the response": true,
+				"Should contain 'results' in the response": true
+			},
+			"testPassFailCounts": {
+				"Folder-level status check": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Should return a object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Should contain the `count` property in the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Should contain 'results' in the response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				632
+			],
+			"allTests": [
+				{
+					"Folder-level status check": true,
+					"Should return a object": true,
+					"Should contain the `count` property in the response": true,
+					"Should contain 'results' in the response": true
+				}
+			]
+		},
+		{
+			"id": "6c6d71fc-4b29-4e16-8da1-b9b42935c906",
+			"name": "[2] Create A New Account (FromAccount)",
+			"url": "http://127.0.0.1:8000/users/",
+			"time": 768,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Folder-level status check": true,
+				"Status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Folder-level status check": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				768
+			],
+			"allTests": [
+				{
+					"Folder-level status check": true,
+					"Status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "d8642fc4-e577-4e83-8f12-c5d8f55f23be",
+			"name": "[4] Get All User Accounts To Confirm Creation Of Users",
+			"url": "http://127.0.0.1:8000/users/",
+			"time": 640,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Folder-level status check": true,
+				"Should contain an accounts 'array' in the response": true,
+				"Should return the correct account data for the `results` user": true
+			},
+			"testPassFailCounts": {
+				"Folder-level status check": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Should contain an accounts 'array' in the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Should return the correct account data for the `results` user": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				640
+			],
+			"allTests": [
+				{
+					"Folder-level status check": true,
+					"Should contain an accounts 'array' in the response": true,
+					"Should return the correct account data for the `results` user": true
+				}
+			]
+		},
+		{
+			"id": "c1fc1208-ca89-4965-b2ef-8db8964f0112",
+			"name": "[5] Create A New Product Item",
+			"url": "http://127.0.0.1:8000/product/",
+			"time": 169,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Folder-level status check": true,
+				"Should display a successful product message": true
+			},
+			"testPassFailCounts": {
+				"Folder-level status check": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Should display a successful product message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				169
+			],
+			"allTests": [
+				{
+					"Folder-level status check": true,
+					"Should display a successful product message": true
+				}
+			]
+		},
+		{
+			"id": "e6872841-b02b-4af2-92c1-4d6982738de1",
+			"name": "[6] Get All Product Item",
+			"url": "http://127.0.0.1:8000/product/",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Folder-level status check": true,
+				"Should contain a product 'array' in the response": true,
+				"Should return the correct product data for the current user": true
+			},
+			"testPassFailCounts": {
+				"Folder-level status check": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Should contain a product 'array' in the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Should return the correct product data for the current user": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Folder-level status check": true,
+					"Should contain a product 'array' in the response": true,
+					"Should return the correct product data for the current user": true
+				}
+			]
+		},
+		{
+			"id": "cc10b209-31e7-4f59-8688-a0927465b4ac",
+			"name": "[6] Get Single Product",
+			"url": "http://127.0.0.1:8000/product/25/",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Folder-level status check": true,
+				"Should contain a product object in the response": true,
+				"Should return the correct product id and create date": true
+			},
+			"testPassFailCounts": {
+				"Folder-level status check": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Should contain a product object in the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Should return the correct product id and create date": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Folder-level status check": true,
+					"Should contain a product object in the response": true,
+					"Should return the correct product id and create date": true
+				}
+			]
+		},
+		{
+			"id": "c2652f71-9852-471e-ace3-4c5a1af04c21",
+			"name": "[5] Create A New Trolley",
+			"url": "http://127.0.0.1:8000/trolley/",
+			"time": 114,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Folder-level status check": true,
+				"Should display a successful trolley message": false
+			},
+			"testPassFailCounts": {
+				"Folder-level status check": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Should display a successful trolley message": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				114
+			],
+			"allTests": [
+				{
+					"Folder-level status check": true,
+					"Should display a successful trolley message": false
+				}
+			]
+		},
+		{
+			"id": "7c5b91b8-94e5-4b02-bdb5-016f4c425952",
+			"name": "[8] Get The Item in Trolley",
+			"url": "http://127.0.0.1:8000/trolley/3",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Folder-level status check": true,
+				"Should contain a account 'object' in the response": true,
+				"Should contain the correct product in the response": true
+			},
+			"testPassFailCounts": {
+				"Folder-level status check": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Should contain a account 'object' in the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Should contain the correct product in the response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Folder-level status check": true,
+					"Should contain a account 'object' in the response": true,
+					"Should contain the correct product in the response": true
+				}
+			]
+		},
+		{
+			"id": "5d582296-4f05-4daf-b389-04ce08f7b4c9",
+			"name": "[5] Create a Trolley Group",
+			"url": "http://127.0.0.1:8000/trolley/",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Folder-level status check": true,
+				"Should display a successful trolley message": false
+			},
+			"testPassFailCounts": {
+				"Folder-level status check": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Should display a successful trolley message": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Folder-level status check": true,
+					"Should display a successful trolley message": false
+				}
+			]
+		},
+		{
+			"id": "956b40cc-6af4-4a54-a825-3c2b236fbe0e",
+			"name": "[8] Get The Trolley Group",
+			"url": "http://127.0.0.1:8000/trolley/3",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Folder-level status check": true,
+				"Should contain a account 'object' in the response": true,
+				"Should contain the correct product in the response": true
+			},
+			"testPassFailCounts": {
+				"Folder-level status check": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Should contain a account 'object' in the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Should contain the correct product in the response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Folder-level status check": true,
+					"Should contain a account 'object' in the response": true,
+					"Should contain the correct product in the response": true
+				}
+			]
+		},
+		{
+			"id": "e8be867d-4c4b-43ef-beb8-af7a76e60b01",
+			"name": "[5] Complete Transaction",
+			"url": "http://127.0.0.1:8000/trolley/",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Folder-level status check": true,
+				"Should display a successful trolley message": false
+			},
+			"testPassFailCounts": {
+				"Folder-level status check": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Should display a successful trolley message": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Folder-level status check": true,
+					"Should display a successful trolley message": false
+				}
+			]
+		},
+		{
+			"id": "d3af52f6-6a82-4330-8b45-457de1cf8075",
+			"name": "[Teardown][10] Delete Trolley Group",
+			"url": "http://127.0.0.1:8000/trolley/3",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Folder-level status check": true
+			},
+			"testPassFailCounts": {
+				"Folder-level status check": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Folder-level status check": true
+				}
+			]
+		},
+		{
+			"id": "0ffa6766-4077-4c06-a941-b79b5e44830b",
+			"name": "[Teardown][10] Delete Trolley",
+			"url": "http://127.0.0.1:8000/trolley/3",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Folder-level status check": true
+			},
+			"testPassFailCounts": {
+				"Folder-level status check": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Folder-level status check": true
+				}
+			]
+		},
+		{
+			"id": "8b954551-1fa9-43a1-8b7b-15b08f3fad49",
+			"name": "[Teardown][11] Delete Product Item",
+			"url": "http://127.0.0.1:8000/product/25/",
+			"time": 140,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Folder-level status check": true
+			},
+			"testPassFailCounts": {
+				"Folder-level status check": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				140
+			],
+			"allTests": [
+				{
+					"Folder-level status check": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2774,
+	"collection": {
+		"requests": [
+			{
+				"id": "9935e08a-971f-4db6-a828-0a185035a100",
+				"method": "POST"
+			},
+			{
+				"id": "e4eeddd0-1a81-42bd-8719-a8735626d070",
+				"method": "GET"
+			},
+			{
+				"id": "6c6d71fc-4b29-4e16-8da1-b9b42935c906",
+				"method": "POST"
+			},
+			{
+				"id": "d8642fc4-e577-4e83-8f12-c5d8f55f23be",
+				"method": "GET"
+			},
+			{
+				"id": "c1fc1208-ca89-4965-b2ef-8db8964f0112",
+				"method": "POST"
+			},
+			{
+				"id": "e6872841-b02b-4af2-92c1-4d6982738de1",
+				"method": "GET"
+			},
+			{
+				"id": "cc10b209-31e7-4f59-8688-a0927465b4ac",
+				"method": "GET"
+			},
+			{
+				"id": "c2652f71-9852-471e-ace3-4c5a1af04c21",
+				"method": "POST"
+			},
+			{
+				"id": "7c5b91b8-94e5-4b02-bdb5-016f4c425952",
+				"method": "GET"
+			},
+			{
+				"id": "5d582296-4f05-4daf-b389-04ce08f7b4c9",
+				"method": "POST"
+			},
+			{
+				"id": "956b40cc-6af4-4a54-a825-3c2b236fbe0e",
+				"method": "GET"
+			},
+			{
+				"id": "e8be867d-4c4b-43ef-beb8-af7a76e60b01",
+				"method": "POST"
+			},
+			{
+				"id": "d3af52f6-6a82-4330-8b45-457de1cf8075",
+				"method": "DELETE"
+			},
+			{
+				"id": "0ffa6766-4077-4c06-a941-b79b5e44830b",
+				"method": "DELETE"
+			},
+			{
+				"id": "8b954551-1fa9-43a1-8b7b-15b08f3fad49",
+				"method": "DELETE"
+			}
+		]
+	}
+}

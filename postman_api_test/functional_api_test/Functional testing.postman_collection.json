@@ -1,0 +1,858 @@
+{
+	"info": {
+		"_postman_id": "9bd9c406-6cd5-4880-8746-1cdae5cbacbc",
+		"name": "Functional testing",
+		"description": "> This collection identifies the test cases to ensure that the Intergalactic Bank API returns appropriate responses by testing against functional requirements. Check out the [End-to-end testing collection](https://www.postman.com/templates/68de712c-6b56-4e31-8b0b-627360820279/End-to-end-testing) and [Integration testing collection](https://www.postman.com/templates/6f788c17-067a-4074-a528-d07df1df9529/Integration-testing-%23example) to see other test cases for this API. \n  \n\n## 🪐 Get Started\n\nThe fictional Intergalactic Bank Services team is responsible for testing against the functional requirements for this service. You can use this collection to familiarize yourself with the service and its expected behavior or validate that the changes you make to this service conform to the requirements.\n\nSteps to test the Intergalactic Bank API:\n\n1. **Review tests and scripts:** [Tests](https://learning.postman.com/docs/writing-scripts/test-scripts/) are written under the Scripts tab at the folder and request levels. Different testing requirements are distributed between the folders, so be sure to read the documentation for each folder to understand what is being tested.\n    \n2. **Run tests:** To run the collection, navigate to Run Collection from the collection menu. Note that the Setup folder creates and stores resources that will be tested in the Account Tests folder, so these setup requests should always be a prerequisite.\n    \n3. **Review test results:** We have included error messages for many of the test cases to help debug what may be wrong with the service. If using this collection as a pre-merge check, be sure to have all tests passing before submitting (and no, deleting the failing test cases isn’t an option 😉).\n    \n\nFor more details, check out the additional sections below, and click `View Complete Documentation` for the complete documentation. If you have questions about the folder or request, look for the documentation icon for documentation-in-context.\n\n## 🔍 What we’re testing\n\n- In this collection, we are evaluating specific pieces of data for correctness. We test data types and workflows in our other collections.\n    \n- Each of our test requests is named after a specific business rule we are evaluating, and these rules correspond to our stakeholder’s specifications.\n    \n- Our setup and teardown requests are only tested for status code to make sure they run successfully. These endpoints are tested more in depth in our other collections.\n    \n\n## 🧑‍💻How your team can use this collection:\n\n- **Add a mock server to speed up development:** Adding functionality to this service? Since this collection has example responses, you can add a mock server that will return the expected results. Start writing tests against the mock, and once your additions are live, you can swap out the URLs and have a live test suite.\n    \n- **Integrate tests with your CI/CD pipeline:** This comprehensive test suite is a great addition to your existing CI/CD pipeline. Generate the Postman CLI command from the Collection Runner and add this step to your existing checks each time you make a commit affecting this service.\n    \n- **Add a monitor:** If your team is contributing to or relying on this service, it’s a good idea to keep tabs on the status. Adding a monitor to this collection can give you confidence that the service is up and running, and alert you to any breaking changes that may have occurred.\n    \n\n## 🔒A note on authorization\n\nThis API uses an API key-based authorization. In this collection, we test various access control scenarios, and therefore have different authorization setups throughout. Check the folder-level authorization information to see which authorization, if any, is being applied to the included requests.\n\n## 👀 View and share run results\n\nInterested in seeing previous run results? We’re happy to share, and have a few ways for you to stay in the loop:\n\n- You can also share individual run reports from this page.\n    \n- Monitors: If you have a monitor set up for this collection, you can see historical run information by clicking on the Monitors tab on the right sidebar. You can also have the results sent to Slack or other services by setting up an integration.\n    \n\n## 🤝Increase test coverage\n\nThe Intergalactic Bank Services team wants your team to have everything they need to successfully test our services with their applications. Have you added functionality to the API, or written additional test cases we should include? Reach us on our internal Slack by tagging `@bank-services`. Or add an [inline comment](https://learning.postman.com/docs/collaborating-in-postman/working-with-your-team/discussing-your-work/) to this collection with your test case suggestions.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36779137"
+	},
+	"item": [
+		{
+			"name": "Setup",
+			"item": [
+				{
+					"name": "Clean Environment",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Password111",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/clear/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"clear",
+								""
+							]
+						},
+						"description": "This request generates a new API key and saves it to the collection variables if the request is successful."
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/auth",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 11 Mar 2024 01:07:35 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "uWebSockets",
+									"value": "20"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiKey\": \"123456789\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create new account",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Password111",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"bob\",\r\n    \"password\" : \"bobpassword\",\r\n    \"email\" : \"bob@woolworths.com\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						},
+						"description": "Generates a new account (`fromAccount`), that the funds will be transferred from, and saves the following information if the request is successful:\n\n- Account owner from the request body (saved as collection variable `e2e_user_name_from`)\n- Account id from the response body (saved as collection variable `e2e_user_account_id_from`)"
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{{payload}}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/accounts",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"accounts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 11 Mar 2024 01:07:48 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "22"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "uWebSockets",
+									"value": "20"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"account\": {\n        \"id\": 151\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "This folder sets up the resources needed for the test folders later in the collection:\n\n1. **Generate new API key** - Generates a new API key for use in the collection and saves the value as a collection variable, authorizing all following requests.\n2. **Create** **`fromAccount`** - This account is created to test the results of a transaction. Saves the accountId as a collection variable, named as `fromAccountId`. This account will send funds in a transfer.\n3. **Create** **`toAccount`** - Creates a new account that we will use in the `Account Tests` folder. Saves the accountId as a collection variable, named as `toAccountId`. This account will receive a transfer of funds.\n4. **Transfer 500 coins to \"to\" account** - Transfer 500 coins from the `fromAccount` to the `toAccount`."
+		},
+		{
+			"name": "Product Item Test",
+			"item": [
+				{
+					"name": "[5] Create A New Product Item",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Should display a successful product message\", function () {",
+									"     pm.response.to.be.success;     ",
+									"});",
+									"",
+									"if (pm.response.code === 200) {",
+									"    pm.collectionVariables.set(\"e2e_product_id\", response.id);",
+									"}",
+									"",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Password111",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "api-key",
+								"value": "1234"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": \"48211\",\n    \"name\" : \"Mainland Cheese Colby\",\n    \"description\" : \"Block 1kg  $1.35 / 100g\",\n    \"prices\" : [\n\t   { \n\t      \"original_price\" : \"17.39\",\n\t\t  \"save_price\" : \"2.89\",\n\t\t  \"unit\" : \"1kg\"\n\t   }\n\t], \n    \"categories\" : \"Fridge & Deli/Cheese/Block Cheese\",\n    \"product_photo_location\" : \"images/2010/48211.jpg\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/product/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								""
+							]
+						},
+						"description": "Create a new transaction between the `fromAccount` and `toAccount`"
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "api-key",
+										"value": "1234"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"fromAccountId\": {{e2e_user_account_id_from}},\n    \"toAccountId\": {{e2e_user_account_id_to}},\n    \"amount\": 20,\n    \"currency\": \"COSMIC_COINS\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/transactions",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"transactions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 11 Mar 2024 01:08:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "uWebSockets",
+									"value": "20"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"transaction\": {\n        \"id\": 67\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "[5] Update the price",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Should display a successful product message\", function () {",
+									"     pm.response.to.be.success;     ",
+									"});",
+									"",
+									"if (pm.response.code === 200) {",
+									"    pm.collectionVariables.set(\"e2e_product_id\", response.id);",
+									"}",
+									"",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Password111",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "api-key",
+								"value": "1234"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": \"48211\",\n    \"name\" : \"Mainland Cheese Colby\",\n    \"description\" : \"Block 1kg  $1.35 / 100g\",\n    \"prices\" : [\n\t   { \n\t      \"original_price\" : \"17.39\",\n\t\t  \"save_price\" : \"2.89\",\n\t\t  \"unit\" : \"1kg\"\n\t   }\n\t], \n    \"categories\" : \"Fridge & Deli/Cheese/Block Cheese\",\n    \"product_photo_location\" : \"images/2010/48211.jpg\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/product/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								""
+							]
+						},
+						"description": "Create a new transaction between the `fromAccount` and `toAccount`"
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "api-key",
+										"value": "1234"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"fromAccountId\": {{e2e_user_account_id_from}},\n    \"toAccountId\": {{e2e_user_account_id_to}},\n    \"amount\": 20,\n    \"currency\": \"COSMIC_COINS\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/transactions",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"transactions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 11 Mar 2024 01:08:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "uWebSockets",
+									"value": "20"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"transaction\": {\n        \"id\": 67\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Verify The new price",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Should contain a product object in the response\", function () {",
+									"    pm.expect(response).to.be.an('object');",
+									"});",
+									"",
+									"pm.test(\"Should return the correct product id and create date\", function () {",
+									"    pm.expect(response.id).to.be.an(\"number\");",
+									"    pm.expect(response.created).to.match(/(\\d{4})-(\\d{2})-(\\d{2}) (\\d{2}):(\\d{2}):(\\d{2})/);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Password111",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/product/{{e2e_product_id}}/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"{{e2e_product_id}}",
+								""
+							]
+						},
+						"description": "Get a list of all transactions to and from the `toAccount`"
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/transactions?toAccountId={{e2e_user_account_id_to}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"transactions"
+									],
+									"query": [
+										{
+											"key": "toAccountId",
+											"value": "{{e2e_user_account_id_to}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 11 Mar 2024 01:08:22 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "143"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "uWebSockets",
+									"value": "20"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"transactions\": [\n        {\n            \"id\": 67,\n            \"createdAt\": \"2024-03-11T01:08:15.000Z\",\n            \"fromAccountId\": 151,\n            \"toAccountId\": 152,\n            \"currency\": \"COSMIC_COINS\",\n            \"amount\": 20\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"description": "This folder contains our test cases. In addition to the **request-level tests**, we have included tests at the **collection level**, which will run against every request in the collection, and at the **folder level** that will be applied to all requests included in that folder.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"pm.test(\"Content-Type header is application/json\", () => {",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.include('application/json');",
+							"});"
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Cleanup",
+			"item": [
+				{
+					"name": "Delete Product Item Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//clean up all variables now that the folder's run is over",
+									"pm.collectionVariables.unset(\"e2e_transaction_id_to\")",
+									"pm.collectionVariables.unset(\"e2e_user_account_id_from\")",
+									"pm.collectionVariables.unset(\"e2e_user_account_id_to\")",
+									"pm.collectionVariables.unset(\"e2e_user_name_from\")",
+									"pm.collectionVariables.unset(\"e2e_user_name_to\")",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Password111",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/product/{{e2e_product_id}}/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"{{e2e_product_id}}",
+								""
+							]
+						},
+						"description": "Delete the `fromAccount` account and clear out the collection variables we created during this test case."
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://template.postman-echo.com/api/v1/accounts/:accountId",
+									"protocol": "https",
+									"host": [
+										"template",
+										"postman-echo",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"accounts",
+										":accountId"
+									],
+									"variable": [
+										{
+											"key": "accountId",
+											"value": "{{e2e_user_account_id_from}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 11 Mar 2024 01:09:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "16"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "uWebSockets",
+									"value": "20"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true\n}"
+						}
+					]
+				}
+			],
+			"description": "These requests will clean up the accounts and variables created during the run of this collection."
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		},
+		{
+			"key": "apiKey",
+			"value": "hRkgiBSD.alY86KwTdRXh2WHrgH1Gs"
+		},
+		{
+			"key": "e2e_product_id",
+			"value": ""
+		}
+	]
+}

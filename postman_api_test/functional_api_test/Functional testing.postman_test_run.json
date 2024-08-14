@@ -1,0 +1,232 @@
+{
+	"id": "6d625915-fdf2-4c0d-a8c2-07cc1844e9fd",
+	"name": "Functional testing",
+	"timestamp": "2024-08-13T23:23:17.490Z",
+	"collection_id": "36779137-9bd9c406-6cd5-4880-8746-1cdae5cbacbc",
+	"folder_id": 0,
+	"environment_id": "36779137-e547157f-aa53-4b34-adf6-b70e37de4bad",
+	"totalPass": 11,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-08-13T23:23:14.212Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "6ee83eb5-306e-4aec-b39e-079e4d994ef1",
+			"name": "Clean Environment",
+			"url": "http://127.0.0.1:8000/clear/",
+			"time": 911,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				911
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "3debb91c-a62e-4bb6-ab25-ca9e6f51e36c",
+			"name": "Create new account",
+			"url": "http://127.0.0.1:8000/users/",
+			"time": 668,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				668
+			],
+			"allTests": [
+				{
+					"Status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "53f35ecd-feeb-401c-8689-582f0983456b",
+			"name": "[5] Create A New Product Item",
+			"url": "http://127.0.0.1:8000/product/",
+			"time": 167,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present": true,
+				"Content-Type header is application/json": true,
+				"Should display a successful product message": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Should display a successful product message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				167
+			],
+			"allTests": [
+				{
+					"Content-Type is present": true,
+					"Content-Type header is application/json": true,
+					"Should display a successful product message": true
+				}
+			]
+		},
+		{
+			"id": "6b22680e-224a-45b8-94b8-b21fb68599fe",
+			"name": "[5] Update the price",
+			"url": "http://127.0.0.1:8000/product/",
+			"time": 163,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present": true,
+				"Content-Type header is application/json": true,
+				"Should display a successful product message": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Should display a successful product message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				163
+			],
+			"allTests": [
+				{
+					"Content-Type is present": true,
+					"Content-Type header is application/json": true,
+					"Should display a successful product message": true
+				}
+			]
+		},
+		{
+			"id": "ddfedd06-7ec7-45d9-ad07-52cf636aee8e",
+			"name": "Verify The new price",
+			"url": "http://127.0.0.1:8000/product/24/",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present": true,
+				"Content-Type header is application/json": true,
+				"Should contain a product object in the response": true,
+				"Should return the correct product id and create date": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Should contain a product object in the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Should return the correct product id and create date": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Content-Type is present": true,
+					"Content-Type header is application/json": true,
+					"Should contain a product object in the response": true,
+					"Should return the correct product id and create date": true
+				}
+			]
+		},
+		{
+			"id": "0e8e2685-80c6-4ee3-a4f8-c622b101531b",
+			"name": "Delete Product Item Copy",
+			"url": "http://127.0.0.1:8000/product/24/",
+			"time": 111,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				111
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2029,
+	"collection": {
+		"requests": [
+			{
+				"id": "6ee83eb5-306e-4aec-b39e-079e4d994ef1",
+				"method": "POST"
+			},
+			{
+				"id": "3debb91c-a62e-4bb6-ab25-ca9e6f51e36c",
+				"method": "POST"
+			},
+			{
+				"id": "53f35ecd-feeb-401c-8689-582f0983456b",
+				"method": "POST"
+			},
+			{
+				"id": "6b22680e-224a-45b8-94b8-b21fb68599fe",
+				"method": "POST"
+			},
+			{
+				"id": "ddfedd06-7ec7-45d9-ad07-52cf636aee8e",
+				"method": "GET"
+			},
+			{
+				"id": "0e8e2685-80c6-4ee3-a4f8-c622b101531b",
+				"method": "DELETE"
+			}
+		]
+	}
+}

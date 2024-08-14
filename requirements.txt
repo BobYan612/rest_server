@@ -1,0 +1,8 @@
+djangorestframework
+markdown
+django
+django-filter
+django-guardian
+Pygments
+PyYAML
+uritemplate
