@@ -38,7 +38,7 @@ There are the below features:
 **Test**  
 The project has completed the E2E test and functional test with Postman API
  - E2E Test: _A complete path from creating customer account to final transaction of a payment_  ([End-to-End_Tests.postman_collection.json](postman_api_test/end2end_test/End-to-End_Tests.postman_collection.json)) ([End-to-End_Tests.postman_test_run.json](postman_api_test/end2end_test/End-to-End_Tests.postman_test_run.json))
- ![E2E Test Result](/postman_api_test/end2end_test/e2e_test_result_capture.jpg)
+ ![E2E Test Result](/postman_api_test/end2end_test/e2e_test_result_capture.jpg) ![E2E Test Summary](/postman_api_test/end2end_test/e2e_test_summary_capture.jpg)
        
  - Functional Test: _A basic function test to verify the create/update/delete of a product item._  ([Functional_testing.postman_collection.json](postman_api_test/functional_api_test/Functional_testing.postman_collection.json)) ([Functional_testing.postman_test_run.json](postman_api_test/functional_api_test/Functional_testing.postman_test_run.json)) 
  ![Functional Test Result](/postman_api_test/functional_api_test/functional_api_test.jpg)
