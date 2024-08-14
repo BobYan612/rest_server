@@ -13,16 +13,16 @@ There are the below features:
 >The server is still under refining, the REST API will be improved in the future. 
 
 **RESTAPI**
-http://xxx.xx/product/                 _# GET all product items or POST a new product item_
-http://xxx.xx/product/<object_id>      _# Query or update a product item such as "Rose Apple"_
-http://xxx.xx/trolley/                 _# GET all trolly items or POST a new trolley item_
-http://xxx.xx/trolley/<object_id>      _# Query or update a trolly item_ 
-http://xxx.xx/trolley_group/           _# GET all trolly groups or POST a new trolley group_
-http://xxx.xx/trolley_group/<object_id>_# Query or update a trolly group_ 
-http://xxx.xx/credit_card/             _# Create a credit card record_
-http://xxx.xx/credit_card/<object_id>  _# Check the information of the credit card_
-http://xxx.xx/transaction/             _# POST complete one transaction_
-http://xxx.xx/users                    _# POST A new account_
+/product/                  _# GET all product items or POST a new product item_  
+/product/<object_id>       _# Query or update a product item such as "Rose Apple"_  
+/trolley/                  _# GET all trolly items or POST a new trolley item_  
+/trolley/<object_id>       _# Query or update a trolly item_  
+/trolley_group/            _# GET all trolly groups or POST a new trolley group_  
+/trolley_group/<object_id> _# Query or update a trolly group_   
+/credit_card/              _# Create a credit card record_
+/credit_card/<object_id>   _# Check the information of the credit card_  
+/transaction/              _# POST complete one transaction_  
+/users                     _# POST A new account_  
 
 
 **Test**  
