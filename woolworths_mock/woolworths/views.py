@@ -123,7 +123,7 @@ def trolley_detail(request, pk):
     """
     try:
         trolleyItem = Trolley.objects.get(id=pk)
-    except trolleyItem.DoesNotExist:
+    except Trolley.DoesNotExist:
         return HttpResponse(status=404)
 
     if request.method == 'GET':
